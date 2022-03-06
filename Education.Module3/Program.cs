@@ -6,9 +6,8 @@ namespace Education.Module3
     {
         static void Main(string[] args)
         {
-            string myName;
-            myName = "Timur";
-
+            string myName= "Timur";
+           
             Console.WriteLine(myName);
 
             Console.ReadKey();
