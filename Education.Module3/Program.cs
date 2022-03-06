@@ -20,6 +20,17 @@ namespace Education.Module3
             Console.WriteLine(0b11);
             Console.WriteLine(5.5);
             Console.ReadKey();
+            
+            string name = "Timur";
+            byte age = 31;
+            bool HaveIApet = true;
+            double MyShoeSize = 43.5;
+
+            Console.WriteLine("My name is " + name);
+            Console.WriteLine("My age " + age);
+            Console.WriteLine("Do I have a pet? " + HaveIApet);
+            Console.WriteLine("My shoe size is " + MyShoeSize);
+            
         }
     }
 }
