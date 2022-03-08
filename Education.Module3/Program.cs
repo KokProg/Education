@@ -47,11 +47,53 @@ namespace Education.Module3
             double result = 5.0 / 2.0 * 3.0;
             Console.WriteLine("Value: {0}", result);
 
+            int olddata = 6;
+            string data = olddata.ToString();
 
-            
+            Console.WriteLine(data);
+
+            Console.WriteLine(olddata);
+
+            Console.Write("Enter your age: ");
+            int agge = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your age is {0} ", agge);
+
+            Console.Write("Enter your name: ");
+            string namee = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            string agee = Console.ReadLine();
+            Console.WriteLine("Your name is {0} and age is {1} ", namee, agee);
+            Console.Write("What is your favorite day of week?: ");
+            DayOfWeek day = (DayOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your favorite day is  {0} ", day);
+
+            Console.Write("Введите имя: ");
+            var Name = Console.ReadLine();
+            Console.Write("Введите возраст: ");
+            var AGE = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your name is {0} and age {1}", Name, AGE);
+
+            Console.Write("Введите дату рождения: ");
+            var birthdate = Console.ReadLine();
+            Console.WriteLine("Your birtdate is {0}", birthdate);
+
             Console.ReadKey();
+        }
+
+            enum DaysOfWeek : byte
+        {
+            Monday = 1,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
 
         }
+        
+            
+
            enum Semaphore
         {
             Red = 100,
