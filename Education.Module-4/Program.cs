@@ -6,55 +6,43 @@ namespace Education.Module_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Цикл do");
-            int t = 0;
+            Console.WriteLine("Введите своё имя");
 
-            do
-            
-                {
-                Console.WriteLine(t);
+            var name = Console.ReadLine();
 
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                
-                    switch (Console.ReadLine())
-                    {
-                        case "red":
-                            Console.BackgroundColor = ConsoleColor.Red;
-                            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("Ваше имя по буквам в обратном порядке: ");
 
-                            Console.WriteLine("Your color is red!");
-                            break;
-
-                        case "green":
-                            Console.BackgroundColor = ConsoleColor.Green;
-                            Console.ForegroundColor = ConsoleColor.Black;
-
-                            Console.WriteLine("Your color is green!");
-                            break;
-
-                        case "cyan":
-                            Console.BackgroundColor = ConsoleColor.Cyan;
-                            Console.ForegroundColor = ConsoleColor.Black;
-
-                            Console.WriteLine("Your color is cyan!");
-                            break;
-                        default:
-                            Console.BackgroundColor = ConsoleColor.Yellow;
-                            Console.ForegroundColor = ConsoleColor.Black;
-
-                            Console.WriteLine("Your color is yellow!");
-                            break;
-                    }
-                t++;
+            for (int ch = name.Length - 1; ch >= 0; ch--)
+            {
+                Console.Write(name[ch] + " ");
             }
-            
-            while (true);
-             
-                 
+
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[0]);
 
             
+                var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
 
-            Console.ReadKey();
+                int temp;
+
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    for (int j = i + 1; j < arr.Length; j++)
+                    {
+                        if (arr[i] > arr[j])
+                        {
+                            temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+
+                foreach (var item in arr)
+                {
+                    Console.Write(item);
+                }
+
+                Console.ReadKey();
         }
     }
 }
