@@ -6,44 +6,43 @@ namespace Education.Module_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите своё имя");
+            var myapples = 5;
+            var hisapples = 6;
+            var hisspeares = 5;
 
-            var name = Console.ReadLine();
+            var result = (myapples != hisspeares) & (myapples < hisapples);
+            Console.WriteLine(result);
 
-            Console.WriteLine("Ваше имя по буквам в обратном порядке: ");
 
-            for (int ch = name.Length - 1; ch >= 0; ch--)
-            {
-                Console.Write(name[ch] + " ");
-            }
 
-            Console.WriteLine("Последняя буква вашего имени: {0}", name[0]);
+            int currentDayInYear = 293;
+            bool isLeapYear = false;
 
-            
-                var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            bool isWinter =
+               !isLeapYear && (currentDayInYear >= 335 || currentDayInYear <= 59)
+               ||
+               isLeapYear && (currentDayInYear >= 336 || currentDayInYear <= 60);
 
-                int temp;
+            Console.WriteLine("Текущее время года - зима: {0}", isWinter);
 
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    for (int j = i + 1; j < arr.Length; j++)
-                    {
-                        if (arr[i] > arr[j])
-                        {
-                            temp = arr[i];
-                            arr[i] = arr[j];
-                            arr[j] = temp;
-                        }
-                    }
-                }
+            string A = "апр";
+            string B = "апр";
 
-                foreach (var item in arr)
-                {
-                    Console.Write(item);
-                }
+            bool C = A != B;
+
+            Console.WriteLine(C);
+
+            int a = 13;
+            int b = 12;
+            double x = 14;
+            double y = 15;
+            bool c = (a < b) || (x > y);
+            Console.WriteLine(c);
+
+
 
                 Console.ReadKey();
         }
     }
 }
- 
+
