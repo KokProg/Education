@@ -305,7 +305,7 @@ namespace Education.Module_4
 
             Console.WriteLine("Итоговая сумма: {0}", sum);
             Console.ReadKey();
-            */
+            
             string[] favcolors = new string[3];
 
             for(int p = 0; p < favcolors.Length; p++)
@@ -350,6 +350,36 @@ namespace Education.Module_4
             
             
 
+            
+            
+                Console.WriteLine("Введите своё имя");
+
+                var name = Console.ReadLine();
+
+                Console.WriteLine("Ваше имя по буквам: ");
+
+                foreach (var ch in name)
+                {
+                    Console.Write(ch + " ");
+                }
+
+                Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+
+                Console.ReadKey();
+
+            */
+            Console.WriteLine("Введите своё имя");
+
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Ваше имя по буквам в обратном порядке: ");
+
+            for (int i =name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i] + " ");
+            }
+
+            Console.ReadKey();
         }
     }
 }
