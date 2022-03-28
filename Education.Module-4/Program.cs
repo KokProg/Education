@@ -367,7 +367,7 @@ namespace Education.Module_4
 
                 Console.ReadKey();
 
-            */
+            
             Console.WriteLine("Введите своё имя");
 
             var name = Console.ReadLine();
@@ -378,6 +378,63 @@ namespace Education.Module_4
             {
                 Console.Write(name[i] + " ");
             }
+
+            
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
+
+            foreach (var item in array)
+
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.Write("Количество строк:");
+            Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
+
+            Console.Write("Количество колонок:");
+            Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
+
+            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            {
+                for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
+                    Console.Write(array[k, i] + " ");
+            
+
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+                int temp;
+
+                for (int l = 0; l< arr.Length; l++)
+                {
+                    for (int j = l + 1; j < arr.Length; j++)
+                    {
+                        if (arr[l] > arr[j])
+
+                        {
+                            temp = arr[l];
+                            arr[l] = arr[j];
+                            arr[j] = temp; 
+                        }         
+                    }
+                }
+                foreach(var itemm in arr)
+                {
+                    Console.Write(itemm);
+                }
+            
+            Console.WriteLine();
+            */
+
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+
+            }
+            Console.WriteLine(sum);
 
             Console.ReadKey();
         }
