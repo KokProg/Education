@@ -4,8 +4,8 @@ namespace Education.Module_4
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+        static void Main()
+        { 
             /*
                         var myapples = 5;
                         var hisapples = 6;

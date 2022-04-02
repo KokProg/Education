@@ -4,7 +4,7 @@ namespace Education.Module3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
 
         {
             const string myName = "Timur";
